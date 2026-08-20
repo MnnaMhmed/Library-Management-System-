@@ -4,11 +4,50 @@ A complete **Library Management System** built using **ASP.NET Core 8 Web API**.
 
 ## GitHub Repository
 
-**GitHub:** https://github.com/your-username/LibraryManagementSystem
+**GitHub:** [Library Management System Repository](https://github.com/MnnaMhmed/Library-Management-System-CODE81-)
 
-> Replace the GitHub URL above with your actual repository URL before submission.
 
 ---
+## Postman Collection
+
+A complete Postman collection is included in the project and covers all implemented API endpoints.
+
+The collection includes:
+
+* Authentication
+* Users
+* Authors
+* Books
+* Categories
+* Members
+* Publishers
+* Borrowing
+* Activity Logs
+
+The collection can be found here:
+
+[Download Postman Collection](./Postman%20Collection/Library-Management-System.postman_collection.json)
+
+
+> **Note:** To test protected endpoints, login first using the `/api/Auth/Login` endpoint and use the returned JWT token in the `Authorization: Bearer <token>` header.
+ 
+  ### Test Credentials
+
+Use the following test account to access protected endpoints:
+
+```text
+
+ _Administrator Role_
+ 
+Username: admin
+Password: Admin@123
+
+
+ 
+ 
+
+---
+
 
 ## Table of Contents
 
@@ -566,7 +605,7 @@ Before running the project, make sure the following are installed:
 Clone the project using:
 
 ```bash
-git clone https://github.com/your-username/LibraryManagementSystem.git
+git clone https://github.com/MnnaMhmed/Library-Management-System-CODE81-
 ```
 
 Then navigate to the project directory:
@@ -575,9 +614,6 @@ Then navigate to the project directory:
 cd LibraryManagementSystem
 ```
 
-> Replace the GitHub URL with the actual repository URL.
-
----
 
 # Database Configuration
 
@@ -594,14 +630,10 @@ Example:
 ```json
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=YOUR_SERVER;Database=LibraryManagementSystem;Trusted_Connection=True;TrustServerCertificate=True;"
+    "DefaultConnection": "Server=localhost;Database=LibraryManagementSystem;Trusted_Connection=True;TrustServerCertificate=True;"
   }
 }
 ```
-
-Replace `YOUR_SERVER` with your SQL Server instance.
-
----
 
 # Entity Framework Core Migrations
 
@@ -759,6 +791,12 @@ LibraryManagementSystem
 │   ├── Migrations
 │   └── Repositories
 │
+├── Database
+│
+├── Postman Collection
+│   └── Library-Management-System.postman_collection.json
+│
+├── LibraryManagmentSystem.sln
 └── README.md
 ```
 
@@ -808,8 +846,7 @@ The layered architecture makes the application easier to maintain, extend, test,
 
 ## Repository
 
+
 GitHub Repository:
 
-**https://github.com/your-username/LibraryManagementSystem**
-
-> Replace this placeholder with the actual GitHub repository URL before submitting the assessment.
+[Library Management System Repository](https://github.com/MnnaMhmed/Library-Management-System-CODE81-)
