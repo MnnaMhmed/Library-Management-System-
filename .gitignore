@@ -1,0 +1,22 @@
+# Visual Studio
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.rsuser
+
+# Logs
+*.log
+
+# Local database files
+*.mdf
+*.ldf
+
+# Environment / secrets
+.env

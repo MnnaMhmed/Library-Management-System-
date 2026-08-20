@@ -1,0 +1,911 @@
+{
+  "info": {
+    "_postman_id": "4628e59c-6677-4715-bd43-8d3d1b31cedf",
+    "name": "Library Managment System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "33762882",
+    "_collection_link": "https://go.postman.co/collection/33762882-4628e59c-6677-4715-bd43-8d3d1b31cedf?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userName\": \"Menna22\",\r\n  \"email\": \"menna123@gmail.com\",\r\n  \"password\": \"Menna@123\",\r\n  \"role\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7257/api/Auth/Register",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Auth",
+                "Register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Authors",
+      "item": [
+        {
+          "name": "GetAllAuthors",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7257/api/Authors/GetAllAuthors",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Authors",
+                "GetAllAuthors"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetAuthorById",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Add Author",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Menna\",\r\n  \"desciption\": \"sdhjs vsjbv b vbvjs\",\r\n  \"birthDate\": \"2003-03-20T07:07:01.349Z\",\r\n  \"nationality\": \"Egyption\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7257/api/Authors/AddAuthor",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Authors",
+                "AddAuthor"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Author",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"string\",\r\n  \"desciption\": \"string\",\r\n  \"birthDate\": \"2026-08-20T07:08:50.432Z\",\r\n  \"nationality\": \"string\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7257/api/Authors/UpdateAuthor/5",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Authors",
+                "UpdateAuthor",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Auhor",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7257/api/Authors/DeleteAuthor/4\n",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Authors",
+                "DeleteAuthor",
+                "4\n"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Books",
+      "item": [
+        {
+          "name": "GetAllBooks",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7257/api/Books/GetAllBooks",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Books",
+                "GetAllBooks"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetBookById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7257/api/Books/GetBookById1",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Books",
+                "GetBookById1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "AddBook",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"My Book\",\r\n  \"isbn\": \"123456\",\r\n  \"edition\": \"string\",\r\n  \"publicationYear\": 1900,\r\n  \"summary\": \"string\",\r\n  \"status\": 0,\r\n  \"language\": \"english\",\r\n  \"coverImageUrl\": \"string\",\r\n  \"publisherId\": 1,\r\n  \"authorIds\": [\r\n    1\r\n  ],\r\n  \"categoryIds\": [\r\n    1\r\n  ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7257/api/Books/AddBook",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Books",
+                "AddBook"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateBook",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"mybook\",\r\n  \"isbn\": \"2345678\",\r\n  \"edition\": \"string\",\r\n  \"publicationYear\": 2100,\r\n  \"summary\": \"string\",\r\n  \"status\": 0,\r\n  \"language\": \"string\",\r\n  \"coverImageUrl\": \"string\",\r\n  \"publisherId\": 1,\r\n  \"authorIds\": [\r\n    1\r\n  ],\r\n  \"categoryIds\": [\r\n    1\r\n  ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7257/api/Books/UpdateBook/3",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Books",
+                "UpdateBook",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeleteBook",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7257/api/Books/DeleteVBook/4\n",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Books",
+                "DeleteVBook",
+                "4\n"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Cateories",
+      "item": [
+        {
+          "name": "GetAllCategories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7257/api/Categories/GetAllCategories",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Categories",
+                "GetAllCategories"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7257/api/Categories/GetCategoryById/1",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Categories",
+                "GetCategoryById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "AddCategory",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Romaniq\",\r\n  \"parentCategoryId\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7257/api/Categories/AddCategory",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Categories",
+                "AddCategory"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Catgory",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"string\",\r\n  \"parentCategoryId\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7257/api/Categories/UpdateCategory/3",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Categories",
+                "UpdateCategory",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeleteCateogry",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7257/api/Categories/DeleteCategory/4",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Categories",
+                "DeleteCategory",
+                "4"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Members",
+      "item": [
+        {
+          "name": "GetAllMembers",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "GetMemberById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7257/api/Members/GetMemberById/1",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Members",
+                "GetMemberById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Member",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstName\": \"Menna\",\r\n  \"lastName\": \"Mohammed\",\r\n  \"email\": \"string@gmail.com\",\r\n  \"phoneNumber\": \"23456789\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7257/api/Members/Add_Member",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Members",
+                "Add_Member"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateMember",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstName\": \"Maha\",\r\n  \"lastName\": \"gvhf\",\r\n  \"email\": \"string\",\r\n  \"phoneNumber\": \"345678\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7257/api/Members/UpdateMember/5",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Members",
+                "UpdateMember",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeleteMember",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7257/api/Members/DeleteMember/4",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Members",
+                "DeleteMember",
+                "4"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Publishers",
+      "item": [
+        {
+          "name": "GetAllPublishers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7257/api/Publishers/GetAllPublishers",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Publishers",
+                "GetAllPublishers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetPublisherById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7257/api/Publishers/GetPublisherById/1",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Publishers",
+                "GetPublisherById",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "AddPublisher",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Menna\",\r\n  \"address\": \"Egypt\",\r\n  \"phoneNumber\": \"13243567\",\r\n  \"email\": \"string\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7257/api/Publishers/AddPublisher",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Publishers",
+                "AddPublisher"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "UpdatePublisher",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Mohammed\",\r\n  \"address\": \"ghjdnv\",\r\n  \"phoneNumber\": \"23456789\",\r\n  \"email\": \"string\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7257/api/Publishers/UpdatePublisher4",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Publishers",
+                "UpdatePublisher4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeletePublisher",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7257/api/Publishers/DeletePublisher/5",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Publishers",
+                "DeletePublisher",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "GetAllUsers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7257/api/Users/GetAllUsers",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Users",
+                "GetAllUsers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetUserById",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "UpdateUser",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 4,\r\n  \"userName\": \"Menna\",\r\n  \"email\": \"string\",\r\n  \"role\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7257/api/Users/UpdateUser/4",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Users",
+                "UpdateUser",
+                "4"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DeleteUser",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7257/api/Users/DeleteUser4",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Users",
+                "DeleteUser4"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Borrowing",
+      "item": [
+        {
+          "name": "GetAllBorrowingTransactions",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7257/api/Borrowing/GetAll",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Borrowing",
+                "GetAll"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GetById",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Borrow",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"bookId\": 1,\r\n  \"memberId\": 1,\r\n  \"dueDate\": \"2026-08-20T07:19:37.855Z\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7257/api/Borrowing/borrow",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Borrowing",
+                "borrow"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "ReturnBook",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7257/api/Borrowing/return/1",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7257",
+              "path": [
+                "api",
+                "Borrowing",
+                "return",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Activity Logs",
+      "item": [
+        {
+          "name": "GetAllLogs",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjEiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhZG1pbkBsaWJyYXJ5LmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluaXN0cmF0b3IiLCJleHAiOjE3ODcyMTU5NTd9.BQ2suKVSx2sC3aQ0HY0agM5zcc4cmN_BcqEzpHe7Qzk",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
