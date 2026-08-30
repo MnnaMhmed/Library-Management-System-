@@ -43,7 +43,7 @@ namespace Library.API.Controllers
         [HttpPost("AddPublisher")]
         [Authorize(Roles = "Administrator,Librarian")]
 
-        public async Task<IActionResult> Create(PublisherDto dto)
+        public async Task<IActionResult> Create(AddPublisherDto dto)
         {
             var publisherId = await _publisherService.CreateAsync(dto);
 

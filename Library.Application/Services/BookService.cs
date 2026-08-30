@@ -75,6 +75,7 @@ namespace Library.Application.Services
 
             return new BookDto
             {
+                Id = book.Id,
                 Title = book.Title,
                 ISBN = book.ISBN,
                 Edition = book.Edition,
@@ -89,7 +90,7 @@ namespace Library.Application.Services
             };
         }
 
-        public async Task<BookDto> CreateAsync(BookDto dto)
+        public async Task<BookDto> CreateAsync(CreateBookDto dto)
         {
             var publisher = await _unitOfWork.Publishers
                 .GetByIdAsync(dto.PublisherId);
@@ -104,15 +105,15 @@ namespace Library.Application.Services
                 Edition = dto.Edition,
                 PublicationYear = dto.PublicationYear,
                 Summary = dto.Summary,
-                Status=dto.Status,
+                Status = dto.Status,
                 Language = dto.Language,
                 CoverImageUrl = dto.CoverImageUrl,
                 PublisherId = dto.PublisherId
-               
             };
 
             await _unitOfWork.Books.AddAsync(book);
 
+            // Save once to generate Book.Id
             await _unitOfWork.SaveChangesAsync();
 
             await _activityLogService.LogAsync(
@@ -120,7 +121,6 @@ namespace Library.Application.Services
                 "Book",
                 book.Id);
 
-            await _unitOfWork.SaveChangesAsync();
             foreach (var authorId in dto.AuthorIds)
             {
                 var author = await _unitOfWork.Authors
@@ -159,7 +159,7 @@ namespace Library.Application.Services
                 ?? throw new Exception("Book could not be created.");
         }
 
-        public async Task<bool> UpdateAsync(int id, BookDto dto)
+        public async Task<bool> UpdateAsync(int id, CreateBookDto dto)
         {
             var book = await _unitOfWork.Books.GetByIdAsync(id);
 

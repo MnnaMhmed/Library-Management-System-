@@ -13,9 +13,9 @@ namespace Library.Application.Interfaces
 
         Task<CategoryDto?> GetByIdAsync(int id);
 
-        Task<CategoryDto> CreateAsync(CategoryDto dto);
+        Task<CategoryDto> CreateAsync(CreateCategoryDto dto);
 
-        Task<bool> UpdateAsync(int id, CategoryDto dto);
+        Task<bool> UpdateAsync(int id, CreateCategoryDto dto);
 
         Task<bool> DeleteAsync(int id);
     }

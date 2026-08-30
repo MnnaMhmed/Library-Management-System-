@@ -51,7 +51,7 @@ namespace Library.Application.Services
             };
         }
 
-        public async Task<AuthorDto> CreateAsync(AuthorDto dto)
+        public async Task<AuthorDto> CreateAsync(CreateAuthorDto dto)
         {
             var author = new Author
             {
@@ -80,7 +80,7 @@ namespace Library.Application.Services
 
         public async Task<bool> UpdateAsync(
             int id,
-            AuthorDto dto)
+            CreateAuthorDto dto)
         {
             var author = await _unitOfWork.Authors.GetByIdAsync(id);
 

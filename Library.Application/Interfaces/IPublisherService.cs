@@ -13,7 +13,7 @@ namespace Library.Application.Interfaces
 
         Task<PublisherDto?> GetByIdAsync(int id);
 
-        Task<PublisherDto> CreateAsync(PublisherDto dto);
+        Task<AddPublisherDto> CreateAsync(AddPublisherDto dto);
 
         Task<bool> UpdateAsync(int id, PublisherDto dto);
 

@@ -26,6 +26,7 @@ namespace Library.Application.Services
 
             return categories.Select(c => new CategoryDto
             {
+                id=c.Id,
                 Name = c.Name,
                 ParentCategoryId = c.ParentCategoryId
             });
@@ -40,12 +41,13 @@ namespace Library.Application.Services
 
             return new CategoryDto
             {
+                id = category.Id,
                 Name = category.Name,
                 ParentCategoryId = category.ParentCategoryId
             };
         }
 
-        public async Task<CategoryDto> CreateAsync(CategoryDto dto)
+        public async Task<CategoryDto> CreateAsync(CreateCategoryDto dto)
         {
             if (dto.ParentCategoryId.HasValue)
             {
@@ -76,7 +78,7 @@ namespace Library.Application.Services
             };
         }
 
-        public async Task<bool> UpdateAsync(int id, CategoryDto dto)
+        public async Task<bool> UpdateAsync(int id, CreateCategoryDto dto)
         {
             var category = await _unitOfWork.Categories.GetByIdAsync(id);
 

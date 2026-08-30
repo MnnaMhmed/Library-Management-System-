@@ -14,9 +14,9 @@ namespace Library.Application.Interfaces
 
         Task<AuthorDto?> GetByIdAsync(int id);
 
-        Task<AuthorDto> CreateAsync(AuthorDto dto);
+        Task<AuthorDto> CreateAsync(CreateAuthorDto dto);
 
-        Task<bool> UpdateAsync(int id, AuthorDto dto);
+        Task<bool> UpdateAsync(int id, CreateAuthorDto dto);
 
         Task<bool> DeleteAsync(int id);
     }

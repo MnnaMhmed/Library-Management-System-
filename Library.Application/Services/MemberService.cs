@@ -25,6 +25,7 @@ namespace Library.Application.Services
 
             return members.Select(m => new MemberDto
             {
+                Id= m.Id,
                 FirstName = m.FirstName,
                 LastName = m.LastName,
                 Email = m.Email,
@@ -41,6 +42,7 @@ namespace Library.Application.Services
 
             return new MemberDto
             {
+                Id=member.Id,
                 FirstName = member.FirstName,
                 LastName = member.LastName,
                 Email = member.Email,
@@ -48,7 +50,7 @@ namespace Library.Application.Services
             };
         }
 
-        public async Task<MemberDto> CreateAsync(MemberDto dto)
+        public async Task<CreateMemberDto> CreateAsync(CreateMemberDto dto)
         {
             var member = new Member
             {
@@ -67,7 +69,7 @@ namespace Library.Application.Services
     member.Id);
             await _unitOfWork.SaveChangesAsync();
 
-            return new MemberDto
+            return new CreateMemberDto
             {
                 FirstName = member.FirstName,
                 LastName = member.LastName,
@@ -76,7 +78,7 @@ namespace Library.Application.Services
             };
         }
 
-        public async Task<bool> UpdateAsync(int id, MemberDto dto)
+        public async Task<bool> UpdateAsync(int id, CreateMemberDto dto)
         {
             var member = await _unitOfWork.Members.GetByIdAsync(id);
 

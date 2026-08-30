@@ -50,7 +50,7 @@ namespace Library.Application.Services
             };
         }
 
-        public async Task<PublisherDto> CreateAsync(PublisherDto dto)
+        public async Task<AddPublisherDto> CreateAsync(AddPublisherDto dto)
         {
             var publisher = new Publisher
             {
@@ -67,7 +67,7 @@ namespace Library.Application.Services
     publisher.Id);
             await _unitOfWork.SaveChangesAsync();
 
-            return new PublisherDto
+            return new AddPublisherDto
             {
                 Name = publisher.Name,
                 Address = publisher.Address,

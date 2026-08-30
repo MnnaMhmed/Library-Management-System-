@@ -15,9 +15,9 @@ namespace Library.Application.Interfaces
 
         Task<BookDto?> GetByIdAsync(int id);
 
-        Task<BookDto> CreateAsync(BookDto dto);
+        Task<BookDto> CreateAsync(CreateBookDto dto);
 
-        Task<bool> UpdateAsync(int id, BookDto dto);
+        Task<bool> UpdateAsync(int id, CreateBookDto dto);
 
         Task<bool> DeleteAsync(int id);
     }

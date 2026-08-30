@@ -41,7 +41,7 @@ namespace Library.API.Controllers
         [HttpPost ("AddCategory")]
         [Authorize(Roles = "Administrator,Librarian")]
 
-        public async Task<IActionResult> Create(CategoryDto dto)
+        public async Task<IActionResult> Create(CreateCategoryDto dto)
         {
             var category = await _categoryService.CreateAsync(dto);
 
@@ -54,7 +54,7 @@ namespace Library.API.Controllers
 
         public async Task<IActionResult> Update(
             int id,
-            CategoryDto dto)
+            CreateCategoryDto dto)
         {
             var updated = await _categoryService.UpdateAsync(id, dto);
 

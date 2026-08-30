@@ -35,7 +35,8 @@
 
                 var response = new
                 {
-                    message = "UnExpected error occurred."
+
+                   message = "UnExpected error occurred "
                 };
 
                 await context.Response.WriteAsync(

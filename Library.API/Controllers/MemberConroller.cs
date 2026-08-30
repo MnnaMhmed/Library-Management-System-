@@ -42,7 +42,7 @@ namespace Library.API.Controllers
 
         [HttpPost("Add_Member")]
         [Authorize(Roles = "Administrator,Librarian,Staff")]
-        public async Task<IActionResult> Create(MemberDto dto)
+        public async Task<IActionResult> Create(CreateMemberDto dto)
         {
             var memberId = await _memberService.CreateAsync(dto);
 
@@ -56,7 +56,7 @@ namespace Library.API.Controllers
 
         public async Task<IActionResult> Update(
             int id,
-            MemberDto dto)
+            CreateMemberDto dto)
         {
             var updated = await _memberService.UpdateAsync(id, dto);
 
