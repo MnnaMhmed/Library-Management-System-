@@ -1,0 +1,1 @@
+import {CanActivateFn,Router} from '@angular/router';import {inject} from '@angular/core';export const authGuard:CanActivateFn=()=>localStorage.getItem('libra_token')?true:inject(Router).createUrlTree(['/login']);
